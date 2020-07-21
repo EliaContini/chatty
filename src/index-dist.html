@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="utf-8" />
+        <link href="./css/style.css" rel="stylesheet" type="text/css" />
+        <title>Chatty</title>
+    </head>
+    <body>
+        <header>
+            <h1>Chatty</h1>
+            <nav id="app-menu"></nav>
+        </header>
+        <hr />
+        <main id="app-page"></main>
+        <hr />
+        <footer></footer>
+        <script>
+            var dojoConfig = {
+                async: true,
+                baseUrl: ".",
+                isDebug: true,
+                locale: "en-gb",
+                packages: [
+                    { name: "app", location: "app" },
+                    { name: "dijit", location: "dijit" },
+                    { name: "dojo", location: "dojo" }
+                ],
+                selectorEngine: "lite"
+            };
+        </script>
+        <script src="./dojo/dojo.js"></script>
+        <script src="./app/App.js"></script>
+    </body>
+</html>

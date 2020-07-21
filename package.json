@@ -1,0 +1,36 @@
+{
+    "name": "chatty",
+    "description": "A simple web chat",
+    "version": "1.0.0",
+    "homepage": "https://github.com/EliaContini/chatty",
+    "maintainers": [
+        {
+            "name": "Elia Contini"
+        }
+    ],
+    "contributors": [
+        {
+            "name": "Elia Contini"
+        }
+    ],
+    "devDependencies": {
+        "dijit": "^1.16.3",
+        "dojo": "^1.16.3",
+        "less": "^3.12.2",
+        "less-plugin-clean-css": "^1.5.1",
+        "util": "npm:dojo-util@^1.16.3"
+    },
+    "license": "MIT",
+    "scripts": {
+        "build": "./build.sh",
+        "develop": "cd src; python3 -m http.server 8000; cd ..",
+        "serve": "cd dist; python3 -m http.server 8000; cd .."
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/EliaContini/chatty"
+    },
+    "bugs": {
+        "url": "https://github.com/EliaContini/chatty/issues"
+    }
+}

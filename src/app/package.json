@@ -1,0 +1,23 @@
+{
+    "name": "chatty",
+    "description": "A simple web chat",
+    "version": "1.0.0",
+    "maintainers": [
+        {
+            "name": "Elia Contini"
+        }
+    ],
+    "contributors": [
+        {
+            "name": "Elia Contini"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/EliaContini/chatty.git",
+            "path": "/"
+        }
+    ],
+    "dojoBuild": "package.js"
+}
