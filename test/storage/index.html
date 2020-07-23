@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Test | Storage</title>
+        <style>
+            .pass:before {
+                content: "PASS: ";
+                color: green;
+                font-weight: bold;
+            }
+
+            .fail:before {
+                content: "FAIL: ";
+                color: red;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Test for Storage</h1>
+
+        <ul id="testResult"></ul>
+
+        <script>
+            var testResult = document.getElementById("testResult");
+
+            function assert(outcome, description) {
+                var li = document.createElement("li");
+                li.className = outcome ? "pass" : "fail";
+                li.appendChild(document.createTextNode(description));
+
+                testResult.appendChild(li);
+            }
+
+            var dojoConfig = {
+                async: true,
+                baseUrl: ".",
+                isDebug: true,
+                locale: "en-gb",
+                packages: [
+                    { name: "app", location: "./../../src/app" },
+                    { name: "dijit", location: "./../../node_modules/dijit" },
+                    { name: "dojo", location: "./../../node_modules/dojo" }
+                ],
+                selectorEngine: "lite"
+            };
+        </script>
+        <script src="./../../node_modules/dojo/dojo.js"></script>
+        <script>
+            require(["app/Storage"], function (Storage) {
+                var storage = new Storage();
+
+                storage.set("nickname", "Elia");
+                var nickname = storage.get("nickname");
+                assert(nickname === "Elia", "Test set/get nickname");
+            });
+        </script>
+    </body>
+</html>
