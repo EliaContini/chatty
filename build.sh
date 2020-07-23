@@ -49,6 +49,7 @@ cp "$SRCDIR/index-dist.html" "$DISTDIR/index.html"
 
 # copy favicon and images
 cp "$SRCDIR/favicon.ico" "$DISTDIR/favicon.ico"
+cp -R "$SRCDIR/img" "$DISTDIR/img"
 
 # build CSS
 "$BASEDIR/node_modules/less/bin/lessc" -ru --source-map --clean-css="--s1 --advanced --compatibility=*" "$SRCDIR/css/style.less" "$DISTDIR/css/style.css"

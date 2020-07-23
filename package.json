@@ -23,7 +23,7 @@
     "license": "MIT",
     "scripts": {
         "build": "./build.sh",
-        "develop": "cd src; python3 -m http.server 8000; cd ..",
+        "develop": "cd src; rm node_modules 2> /dev/null; ln -s ./../node_modules node_modules; python3 -m http.server 8000",
         "serve": "cd dist; python3 -m http.server 8000; cd .."
     },
     "repository": {
