@@ -4,19 +4,34 @@
     Approach: MaintainableCSS <https://maintainablecss.com/>
 */
 /* #region ------------------------------------------------------------- base */
+html,
 body {
-    background-color: #2372e8;/* #3798d4; */
-    color: #fff;
-    font-family: sans-serif;
-    font-size: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: #2372e8; /* #3798d4; */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: 100%;
 }
 
 header {
     background-color: #000;
     color: #fff;
     text-align: center;
+}
+
+main {
+    flex: 1;
+    overflow: auto;
+}
+
+footer {
 }
 
 hr {
@@ -149,5 +164,13 @@ label {
 .pageDefault-form {
     margin: 30vh auto 0 auto;
     width: 15em;
+}
+/* #endregion --------------------------------------------------------------- */
+
+/* #region ---------------------------------------------------------- widgets */
+.messages {
+}
+
+.sendForm {
 }
 /* #endregion --------------------------------------------------------------- */

@@ -25,6 +25,16 @@ define([
 
         refreshInterval: 500, // milliseconds
 
+        _lastMessages: null,
+        _observers: [],
+
+        /**
+         * Boot storage 
+         */
+        boot: function() {
+            setInterval(lang.hitch(this, "getMessages"), this.refreshInterval);
+        },
+
         /**
          * Retrieves chat messages
          *
@@ -32,7 +42,6 @@ define([
          *       handled data of the response
          */
         getMessages: function () {
-            
             var endpoint = this.endpoint;
             var query = {
                 token: this.token
@@ -51,7 +60,16 @@ define([
                     query: query,
                     preventCache: true
                 })
-                .then(lang.hitch(this, "_getMessagesPrepareData"));
+                .then(lang.hitch(this, "_getMessagesPrepareData"))
+                .then(lang.hitch(this, "_notifyObservers"));
+        },
+
+        /**
+         * Allows to observe storage changes
+         * @param {function} callback
+         */
+        observe: function (callback) {
+            this._observers.push(callback);
         },
 
         /**
@@ -82,7 +100,8 @@ define([
                     },
                     preventCache: true
                 })
-                .then(lang.hitch(this, "_sendMessagePrepareData"));
+                .then(lang.hitch(this, "_sendMessagePrepareData"))
+                .then(lang.hitch(this, "getMessages"));
         },
         // ------------------------------------------------------ helper methods
         _getMessagesPrepareData: function (response) {
@@ -112,7 +131,17 @@ define([
                 this.lastTimestamp = messages[0]["timestamp"];
             }
 
+            this._lastMessages = messages;
+
             return messages;
+        },
+
+        _notifyObservers: function () {
+            var observers = this._observers;
+            var messages = this._lastMessages;
+            for (var i = 0, length = observers.length; i < length; i++) {
+                observers[i](messages);
+            }
         },
 
         _sendMessagePrepareData: function (response) {
