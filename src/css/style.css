@@ -5,7 +5,7 @@
 */
 /* #region ------------------------------------------------------------- base */
 body {
-    background-color: #3798d4;
+    background-color: #2372e8;/* #3798d4; */
     color: #fff;
     font-family: sans-serif;
     font-size: 100%;
@@ -110,8 +110,8 @@ label {
 }
 
 .form-button {
-    background-color: #ff876d;
-    border: 2px solid #ff876d;
+    background-color: #dd412b; /* #ff876d; */
+    border: 2px solid #dd412b; /* #ff876d; */
     border-radius: 4px;
     color: #fff;
     padding: 8px 16px;
@@ -129,7 +129,7 @@ label {
 .form-input {
     border: 2px solid #d3d3d3;
     border-radius: 4px;
-    padding: 8px 16px;
+    padding: 8px;
 }
 
 .form-input-isInvalid {
