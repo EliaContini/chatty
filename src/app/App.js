@@ -11,8 +11,13 @@ require([
     "app/Storage"
 ], function (router, PageChat, PageDefault, Storage) {
     var currentPage = null;
-    var nodeAppPageId = "app-page";
-    var storage = new Storage();
+    var elementAppHeaderId = "app-header";
+    var elementAppMainId = "app-main";
+    var elementAppFooterId = "app-footer";
+    var storage = new Storage({
+        // token: "d7a57e6adf3ac3dc9c0abcf18234a66d" // prod token
+        token: "fdac83e677d2626247f62b1bc979e66a" // dev token
+    });
 
     router.register("/", function (event) {
         render(
@@ -26,6 +31,10 @@ require([
     router.register("/chat/", function (event) {
         render(
             new PageChat({
+                layoutElementsIds: {
+                    header: elementAppHeaderId,
+                    footer: elementAppFooterId
+                },
                 params: event,
                 storage: storage
             })
@@ -41,7 +50,7 @@ require([
         renderCleanup();
 
         currentPage = pageInstance;
-        currentPage.placeAt(nodeAppPageId);
+        currentPage.placeAt(elementAppMainId);
         currentPage.startup();
     }
 

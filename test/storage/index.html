@@ -49,11 +49,34 @@
         <script src="./../../node_modules/dojo/dojo.js"></script>
         <script>
             require(["app/Storage"], function (Storage) {
-                var storage = new Storage();
+                var TOKEN = "0397be091db84e163ee8a6846983f8a3"; // test token
+                var storage = new Storage({
+                    token: TOKEN
+                });
 
-                storage.set("nickname", "Elia");
+                var token = storage.get("token");
+                assert(token === TOKEN, "Get dev token");
+
+                storage.set("nickname", "Elia (test)");
                 var nickname = storage.get("nickname");
-                assert(nickname === "Elia", "Test set/get nickname");
+                assert(nickname === "Elia (test)", "Set/get nickname");
+
+                var reqGetMessages = storage.getMessages();
+                reqGetMessages.then(function (messages) {
+                    assert(messages.length >= 0, "Get all chat messages");
+                });
+
+                var reqSendMessage = storage.sendMessage({
+                    message: "Test API: sendMessage"
+                });
+                reqSendMessage.then(
+                    function (message) {
+                        assert(message, "Send message");
+                    },
+                    function (error) {
+                        assert(false, "Send message");
+                    }
+                );
             });
         </script>
     </body>
