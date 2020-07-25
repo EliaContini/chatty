@@ -26,7 +26,7 @@ define([
     SendForm
 ) {
     return declare([_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin], {
-        baseClass: "page",
+        baseClass: "pageChat",
         layoutElementsIds: null, // ids of header and footer DOM elements
         params: null,
         templateString: template,
@@ -41,7 +41,6 @@ define([
         },
 
         postCreate: function () {
-            console.log(this.layoutElementsIds);
             this.widgetSendForm = new SendForm();
             this.widgetSendForm.placeAt(this.layoutElementsIds["footer"]);
             this.widgetSendForm.startup();
@@ -61,9 +60,11 @@ define([
         },
 
         render: function (messages) {
-            console.log(messages);
+            this.widgetMessages.set("messages", messages);
         },
         // ----------------------------------------------------- private methods
-        _listenerSend: function (event) {}
+        _listenerSend: function (event) {
+            this.storage.sendMessage({ message: event.value });
+        }
     });
 });

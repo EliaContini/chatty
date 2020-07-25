@@ -29,9 +29,9 @@ define([
         _observers: [],
 
         /**
-         * Boot storage 
+         * Boot storage
          */
-        boot: function() {
+        boot: function () {
             setInterval(lang.hitch(this, "getMessages"), this.refreshInterval);
         },
 
@@ -105,11 +105,10 @@ define([
         },
         // ------------------------------------------------------ helper methods
         _getMessagesPrepareData: function (response) {
-            var messages = response;
-
-            // this are supposed messages returned by the server
-            // they are in reverse chronological order
-            messages = [
+            // start fake data -------------------------------------------------
+            //    these are supposed to be messages returned by the server
+            //    they are in reverse chronological order
+            response = [
                 {
                     author: "Elia",
                     message: "for me too",
@@ -123,9 +122,35 @@ define([
                 {
                     author: "Bob",
                     message: "is it OK for you?",
-                    timestamp: 1595666826994
+                    timestamp: 1595666770000
+                },
+                {
+                    author: "Bob",
+                    message: "hola",
+                    timestamp: 1595666660000
+                },
+                {
+                    author: "Bob",
+                    message: "ciao",
+                    timestamp: 1595666550000
+                },
+                {
+                    author: "Bob",
+                    message: "hello",
+                    timestamp: 1595666440000
                 }
             ];
+            // end of fake data ------------------------------------------------
+
+            var messages = response;
+
+            var author = this.nickname;
+            var message = null;
+            for (var i = 0, length = messages.length; i < length; i++) {
+                message = messages[i];
+                messages[i]["isMe"] =
+                    message["author"] === author ? true : false;
+            }
 
             if (messages.length > 0) {
                 this.lastTimestamp = messages[0]["timestamp"];

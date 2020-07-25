@@ -1,1 +1,28 @@
-<div>Send form</div>
+<div class="${baseClass}">
+    <form action="#" class="${baseClass}-form">
+        <fieldset class="${baseClass}-fieldset">
+            <legend class="${baseClass}-legend a11y">Send a message</legend>
+            <ol class="${baseClass}-fields">
+                <li class="${baseClass}-message">
+                    <label class="a11y" for="${id}-message"
+                        >Write a message</label
+                    >
+                    <input
+                        class="${baseClass}-input"
+                        data-dojo-attach-point="elementMessage"
+                        id="${id}-message"
+                        type="text"
+                    />
+                </li>
+                <li class="${baseClass}-button">
+                    <button
+                        class="${baseClassForm}-button"
+                        data-dojo-attach-point="elementSend"
+                    >
+                        Send
+                    </button>
+                </li>
+            </ol>
+        </fieldset>
+    </form>
+</div>

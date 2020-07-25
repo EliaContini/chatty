@@ -12,8 +12,8 @@ body {
 }
 
 body {
-    background-color: #2372e8; /* #3798d4; */
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
@@ -90,6 +90,15 @@ label {
 }
 /* #endregion --------------------------------------------------------------- */
 
+.a11y {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 /* #region ------------------------------------------------------------- form */
 .form {
     margin: 0;
@@ -138,7 +147,7 @@ label {
 }
 
 .form-button:hover {
-    border-color: #464646;
+    border-color: #ff1e00;
 }
 
 .form-input {
@@ -159,18 +168,130 @@ label {
 
 /* #region ------------------------------------------------------------- page */
 .pageDefault {
+    background-color: #2372e8;
+    color: #fff;
+    height: 100%;
 }
 
 .pageDefault-form {
-    margin: 30vh auto 0 auto;
+    margin: 0 auto;
+    padding-top: 30vh;
     width: 15em;
+}
+
+.pageChat {
+    height: 100%;
 }
 /* #endregion --------------------------------------------------------------- */
 
 /* #region ---------------------------------------------------------- widgets */
 .messages {
+    background-color: #ddd;
+    background-image: url("./../img/chat_bg.png");
+    color: #000;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 592px;
+    overflow: auto;
+    padding: 0 24px;
+    width: 592px;
+}
+
+.message {
+    padding: 0 0 16px 0;
+}
+
+.message:first-child {
+    padding-top: 16px;
+}
+
+.message-wrap {
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    color: #000;
+    max-width: 208px;
+    padding: 16px;
+}
+
+.message-isMe {
+    text-align: right;
+}
+
+.message-isMe .message-wrap {
+    background-color: #fcf6c5;
+    display: inline-block;
+    text-align: left;
+}
+
+.message-author {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+.message-message {
+    margin: 0;
+    padding: 0;
+}
+
+.message-time {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+    padding: 0;
+    text-align: right;
 }
 
 .sendForm {
+    background-color: #2372e8;
+    color: #fff;
+    padding: 8px;
+    margin: 0 auto;
+    max-width: 624px;
+    width: 624px;
+}
+
+.sendForm-fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.sendForm-legend {
+    /* see a11y: hidden but readable for screen readers */
+}
+
+.sendForm-fields {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sendForm-message {
+    width: 100%;
+}
+
+.sendForm-input {
+    padding: 8px;
+    width: 100%;
+}
+
+.sendForm-input:focus {
+    outline-color: #005de7;
+}
+
+.sendForm-button {
+    padding-left: 8px;
+}
+
+@media screen and (max-width: 756px) {
+    .messages,
+    .sendForm {
+        max-width: auto;
+        width: auto;
+    }
 }
 /* #endregion --------------------------------------------------------------- */
