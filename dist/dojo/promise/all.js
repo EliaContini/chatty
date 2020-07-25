@@ -1,0 +1,4 @@
+//>>built
+define("dojo/promise/all",["../_base/array","../_base/lang","../Deferred","../when"],function(g,l,k,m){var n=g.some;return function(b){var c,a;l.isArray(b)?a=b:b&&"object"===typeof b&&(c=b);var f=[];if(c){a=[];for(var h in c)Object.hasOwnProperty.call(c,h)&&(f.push(h),a.push(c[h]));var e={}}else a&&(e=[]);if(!a||!a.length)return(new k).resolve(e);var d=new k;d.promise.always(function(){e=f=null});var g=a.length;n(a,function(a,b){c||f.push(b);m(a,function(a){d.isFulfilled()||(e[f[b]]=a,0===--g&&d.resolve(e))},
+d.reject);return d.isFulfilled()});return d.promise}});
+//# sourceMappingURL=all.js.map

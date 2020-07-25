@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"dijit.js",
+"lineCount":2,
+"mappings":"A;AAAAA,MAAA,CAAO,aAAP,CAAsB,uIAAA,MAAA,CAAA,GAAA,CAAtB,CAUG,QAAQ,CAACC,CAAD,CAAO,CAcjB,MAAOA,EAdU,CAVlB;",
+"sources":["dijit.js.uncompressed.js"],
+"names":["define","dijit"]
+}

@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"number.js",
+"lineCount":2,
+"mappings":"A;AAAAA,MAAA,CACA,8BADA,CAEA,CACC,iBAAoB,KADrB,CAEC,SAAY,QAFb,CAGC,uBAA0B,QAH3B,CAIC,KAAQ,GAJT,CAKC,YAAe,GALhB,CAMC,UAAa,GANd,CAOC,sBAAuB,WAPxB,CAQC,IAAO,oBARR,CASC,SAAY,GATb,CAUC,eAAkB,iCAVnB,CAWC,SAAY,QAXb,CAYC,MAAS,GAZV,CAaC,cAAiB,QAblB,CAcC,qBAAsB,WAdvB,CAeC,cAAiB,WAflB,CAgBC,uBAAwB,iBAhBzB,CAiBC,cAAiB,GAjBlB,CAkBC,QAAW,GAlBZ,CAmBC,YAAe,GAnBhB,CAFA;",
+"sources":["number.js.uncompressed.js"],
+"names":["define"]
+}

@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"currency.js",
+"lineCount":2,
+"mappings":"A;AAAAA,MAAA,CACA,8BADA,CAEA,CACC,WAAc,KADf,CAEC,WAAc,KAFf,CAGC,WAAc,KAHf,CAIC,WAAc,KAJf,CAKC,WAAc,KALf,CAMC,WAAc,GANf,CAOC,WAAc,KAPf,CAQC,WAAc,KARf,CAFA;",
+"sources":["currency.js.uncompressed.js"],
+"names":["define"]
+}

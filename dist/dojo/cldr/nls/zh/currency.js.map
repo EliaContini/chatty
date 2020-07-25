@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"currency.js",
+"lineCount":3,
+"mappings":"A;AAAAA,MAAA,CACA,2BADA,CAEA,CACC,gBAAmB,cADpB,CAEC,gBAAmB,oBAFpB,CAGC,gBAAmB,cAHpB,CAIC,WAAc,UAJf,CAKC,gBAAmB,cALpB,CAMC,WAAc,KANf,CAOC,gBAAmB,cAPpB,CAQC,gBAAmB,0BARpB,CASC,WAAc,QATf,CAUC,gBAAmB,cAVpB,CAWC,WAAc,QAXf,CAYC,gBAAmB,0BAZpB,CAaC,WAAc,KAbf,CAcC,WAAc,QAdf,CAeC,gBAAmB,gCAfpB,CAgBC,WAAc,KAhBf,CAiBC,WAAc,KAjBf;AAkBC,WAAc,KAlBf,CAFA;",
+"sources":["currency.js.uncompressed.js"],
+"names":["define"]
+}

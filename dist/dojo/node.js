@@ -1,0 +1,3 @@
+//>>built
+define("dojo/node",["./_base/kernel","./has","require"],function(c,g,e){var f=c.global.require&&c.global.require.nodeRequire;if(!f)throw Error("Cannot find the Node.js require");var d=f("module");return{load:function(a,b,c){d._findPath&&d._nodeModulePaths&&(b=d._findPath(a,d._nodeModulePaths(b.toUrl("."))),!1!==b&&(a=b));b=define;define=void 0;try{var e=f(a)}finally{define=b}c(e)},normalize:function(a,b){"."===a.charAt(0)&&(a=e.toUrl(b("./"+a)));return a}}});
+//# sourceMappingURL=node.js.map

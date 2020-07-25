@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"loading.js",
+"lineCount":2,
+"mappings":"A;AAAAA,MAAA,CAAO,sBAAP,CAA+B,CAC9BC,aAAc,iBADgB,CAE9BC,WAAY,uBAFkB,CAA/B;",
+"sources":["loading.js.uncompressed.js"],
+"names":["define","loadingState","errorState"]
+}

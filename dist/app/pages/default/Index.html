@@ -1,0 +1,35 @@
+<article class="${baseClass}">
+    <form action="#" class="${baseClass}-form ${baseClassForm}">
+        <fieldset class="${baseClassForm}-fieldset">
+            <legend class="${baseClassForm}-legend">Before to begin</legend>
+            <ol class="${baseClassForm}-fields">
+                <li class="${baseClassForm}-field">
+                    <label for="${id}-nickname"
+                        >Choose your nickname<br />(minimum 3 characters)</label
+                    >
+                    <br />
+                    <input
+                        aria-required="true"
+                        class="${baseClassForm}-input ${baseClassForm}-input--login"
+                        data-dojo-attach-point="elementNickname"
+                        name="nickname"
+                        id="${id}-nickname"
+                        minlength="${minLength}"
+                        type="text"
+                    />
+                </li>
+                <li
+                    class="${baseClassForm}-field ${baseClassForm}-field--buttonBar"
+                >
+                    <button
+                        class="${baseClassForm}-button ${baseClassForm}-button--login"
+                        data-dojo-attach-point="elementSubmit"
+                        type="submit"
+                    >
+                        Let's chat!
+                    </button>
+                </li>
+            </ol>
+        </fieldset>
+    </form>
+</article>

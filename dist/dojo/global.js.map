@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"global.js",
+"lineCount":2,
+"mappings":"A;AAAAA,MAAA,CAAO,aAAP,CAAsB,QAAQ,EAAE,CAC5B,MAAsB,WAAtB,GAAI,MAAOC,OAAX,EAAuD,UAAvD,GAAqC,MAAOA,OAA5C,CAIWA,MAJX,CAM2B,WAAtB,GAAI,MAAOC,OAAX,CAEMA,MAFN,CAIoB,WAApB,GAAI,MAAOC,KAAX,CAEMA,IAFN,CAIE,IAfqB,CAAhC;",
+"sources":["global.js.uncompressed.js"],
+"names":["define","global","window","self"]
+}

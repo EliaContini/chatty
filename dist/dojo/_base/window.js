@@ -1,0 +1,4 @@
+//>>built
+define("dojo/_base/window",["./kernel","./lang","../sniff"],function(a,h,d){var c={global:a.global,doc:a.global.document||null,body:function(b){b=b||a.doc;return b.body||b.getElementsByTagName("body")[0]},setContext:function(b,e){a.global=c.global=b;a.doc=c.doc=e},withGlobal:function(b,e,d,k){var f=a.global;try{return a.global=c.global=b,c.withDoc.call(null,b.document,e,d,k)}finally{a.global=c.global=f}},withDoc:function(b,e,f,k){var h=c.doc,n=d("quirks"),p=d("ie"),g,l;try{a.doc=c.doc=b;a.isQuirks=
+d.add("quirks","BackCompat"==a.doc.compatMode,!0,!0);if(d("ie")&&(l=b.parentWindow)&&l.navigator){var m=parseFloat(l.navigator.appVersion.split("MSIE ")[1])||void 0;(g=b.documentMode)&&5!=g&&Math.floor(m)!=g&&(m=g);a.isIE=d.add("ie",m,!0,!0)}f&&"string"==typeof e&&(e=f[e]);return e.apply(f,k||[])}finally{a.doc=c.doc=h,a.isQuirks=d.add("quirks",n,!0,!0),a.isIE=d.add("ie",p,!0,!0)}}};h.mixin(a,c);return c});
+//# sourceMappingURL=window.js.map

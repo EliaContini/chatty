@@ -1,0 +1,4 @@
+//>>built
+define("dojo/cldr/nls/el/number",{scientificFormat:"#E0",infinity:"\u221e",superscriptingExponent:"\u00d7",list:";",percentSign:"%",minusSign:"-","decimalFormat-short":"000\u00a0\u03c4\u03c1\u03b9\u03c3'.'",nan:"NaN",plusSign:"+",currencyFormat:"#,##0.00\u00a0\u00a4;(#,##0.00\u00a0\u00a4)",perMille:"\u2030",group:".",percentFormat:"#,##0%","decimalFormat-long":"000 \u03c4\u03c1\u03b9\u03c3\u03b5\u03ba\u03b1\u03c4\u03bf\u03bc\u03bc\u03cd\u03c1\u03b9\u03b1",decimalFormat:"#,##0.###","currencyFormat-short":"000\u00a0\u03c4\u03c1\u03b9\u03c3'.'\u00a0\u00a4",
+timeSeparator:":",decimal:",",exponential:"e"});
+//# sourceMappingURL=number.js.map

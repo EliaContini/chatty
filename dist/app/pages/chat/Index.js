@@ -1,0 +1,5 @@
+//>>built
+require({cache:{"url:app/pages/chat/Index.html":'\x3carticle class\x3d"${baseClass}"\x3e\n    \x3cdiv\n        data-dojo-attach-point\x3d"widgetMessages"\n        data-dojo-type\x3d"app/pages/chat/widgets/Messages"\n    \x3e\x3c/div\x3e\n\x3c/article\x3e\n'}});
+define("app/pages/chat/Index","dijit/_TemplatedMixin dijit/_WidgetBase dijit/_WidgetsInTemplateMixin dojo/_base/declare dojo/_base/lang dojo/text!./Index.html ./widgets/SendForm ./widgets/Messages".split(" "),function(c,d,e,f,b,g,h){return f([d,c,e],{baseClass:"pageChat",layoutElementsIds:null,params:null,templateString:g,storage:null,widgetSendForm:null,widgetMessages:null,destroy:function(){this.widgetSendForm.destroy();this.inherited(arguments)},postCreate:function(){this.widgetSendForm=new h;
+this.widgetSendForm.placeAt(this.layoutElementsIds.footer);this.widgetSendForm.startup();this.own(this.widgetSendForm.on("send",b.hitch(this,"_listenerSend")));this.storage.observe(b.hitch(this,"render"));this.storage.boot()},render:function(a){this.widgetMessages.set("messages",a)},_listenerSend:function(a){this.storage.sendMessage({message:a.value})}})});
+//# sourceMappingURL=Index.js.map

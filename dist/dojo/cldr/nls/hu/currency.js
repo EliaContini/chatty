@@ -1,0 +1,3 @@
+//>>built
+define("dojo/cldr/nls/hu/currency",{HKD_displayName:"hongkongi doll\u00e1r",CNY_displayName:"k\u00ednai j\u00fcan",JPY_displayName:"jap\u00e1n jen",JPY_symbol:"\u00a5",USD_displayName:"USA-doll\u00e1r",CAD_symbol:"CAD",GBP_displayName:"brit font",CHF_displayName:"sv\u00e1jci frank",CNY_symbol:"CNY",EUR_displayName:"eur\u00f3",GBP_symbol:"GBP",CAD_displayName:"kanadai doll\u00e1r",USD_symbol:"USD",EUR_symbol:"EUR",AUD_displayName:"ausztr\u00e1l doll\u00e1r",CHF_symbol:"CHF",HKD_symbol:"HKD",AUD_symbol:"AUD"});
+//# sourceMappingURL=currency.js.map
